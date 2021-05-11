@@ -1,65 +1,54 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Link from "next/link";
+import Layout from "../components/Layout";
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+const Principal = () => (
+  <Layout
+    title="Principal"
+    transparent
+    imgUrl="/desktop.jpg"
+    blur={1}
+    animation
+    navBarIn
+    sideBarIn
+    dark
+  >
+    <div className="row justify-content-center col-md-10 offset-md-1 min-vh-100">
+      <div
+        className="card card-body transparent text-white justify-content-start mt-5"
+        style={{ border: "none" }}
+      >
+        <h1 className="card-title display-3 animate__animated animate__fadeIn">
+          Hi,
         </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
+        <h2 className="card-text display-4 animate__animated animate__fadeIn animate__delay-1s">
+          I'm Janyel,
+        </h2>
+        <h2 className="display-4 animate__animated animate__fadeIn animate__delay-2s">
+          Web Developer
+        </h2>
+        <h4 className="animate__animated animate__fadeIn animate__delay-3s text-warning">
+          <small>Junior Full Stack</small>
+        </h4>
+      </div>
+      <div className="row align-items-center animate__animated animate__fadeInUp animate__delay-2s">
+        <p className="text-center text-white">
+          A little about me: I love challenges. I love solving problems in the
+          most efficient and elegant way. Progaming is the game in my live, is
+          my passion.
         </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
+      </div>
+      <div>
+        <Link href="portfolio#ContactForm">
+          <button
+            className="btn btn-outline-primary btn-lg text-light animate__animated animate__fadeInUp animate__delay-2s"
+            style={{ backdropFilter: "blur(30px)" }}
           >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
+            We Can Make The Web
+          </button>
+        </Link>
+      </div>
     </div>
-  )
-}
+  </Layout>
+);
+
+export default Principal;
