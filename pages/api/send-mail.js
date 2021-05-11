@@ -16,8 +16,8 @@ export default async function handler(req, res) {
     `;
 
     const transporter = nodemailer.createTransport({
-      host: "smtp.nauta.cu",
-      port: "25",
+      host: process.env.HOST,
+      port: process.env.HOST_PORT,
       secure: false,
       auth: {
         user: process.env.USER,
