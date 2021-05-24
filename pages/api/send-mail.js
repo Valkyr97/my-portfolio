@@ -41,7 +41,7 @@ export default async function handler(req, res) {
     } catch (error) {
       console.log(error);
       res.status(500).json({
-        alert: "I'm sad to say that something went wrong sending the message. If is not to bad could you contact me theow my social networks",
+        alert: "I'm sad to say that something went wrong sending the message. If it is not to bad could you contact me throw my social networks",
         success: "danger",
       });
     }
