@@ -22,8 +22,8 @@ const Nav = ({ sidebar, transparent, animate, light, dark }) => {
         </Link>
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <Link href="/portfolio">
-              <a className="nav-link">My Portfolio</a>
+            <Link href="/about">
+              <a className="nav-link">About Me</a>
             </Link>
           </li>
           <li className="nav-item">

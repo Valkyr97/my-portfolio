@@ -2,6 +2,7 @@ import Row from "./Row";
 import Col from "./Col";
 import ContactMe from "./ContactMe";
 import SocialMedias from "./SocialMedias";
+import { sendFlash } from "./Flash";
 
 const contactForm = () => {
   const handleClick = async (e) => {
@@ -20,7 +21,9 @@ const contactForm = () => {
       }),
       method: "POST",
     });
-    const result = await res.json();
+    const { alert, success } = await res.json();
+    sendFlash(alert, success);
+    document.getElementById('ContactForm').reset();
   };
 
   return (

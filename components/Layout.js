@@ -25,7 +25,6 @@ const Layout = ({
 
   useEffect(() => {
     const handleRouteChange = (url) => {
-      console.log(url);
       NProgress.start();
     };
 

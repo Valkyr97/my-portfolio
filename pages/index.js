@@ -38,7 +38,7 @@ const Principal = () => (
         </p>
       </div>
       <div>
-        <Link href="portfolio#ContactForm">
+        <Link href="about#ContactForm">
           <button
             className="btn btn-outline-primary btn-lg text-light animate__animated animate__fadeInUp animate__delay-2s"
             style={{ backdropFilter: "blur(30px)" }}

@@ -22,7 +22,7 @@ const sideContactBar = ({ transparent, animate, light, dark }) => {
       <p className="text-muted mt-3">
         Send me a message and I will get back to you as soon as I can
       </p>
-      <a href="/portfolio#ContactForm">
+      <a href="/about#ContactForm">
         <button className="btn btn-outline-secondary btn-sm btn-block">
           Message
         </button>
