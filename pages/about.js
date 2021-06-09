@@ -32,7 +32,7 @@ const Portfolio = () => {
               <Col col={8}>
                 <div className="card-body">
                   <h2 className="display-4">Janyel Marrero</h2>
-                  <h4>Studinet</h4>
+                  <h4>Student</h4>
                   <p>
                     I'm a junior Full Stack JavaScript developer. I'm seeking
                     competitives and chalenging projects that help me to grown
