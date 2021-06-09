@@ -14,10 +14,12 @@ export default async function handler(req, res) {
     `;
 
     const transporter = nodemailer.createTransport({
-      host: process.env.HOST,
-      port: process.env.HOST_PORT,
-      secure: false,
+      host: "smtp.gmail.com",
+      service: "gmail",
+      port: 465,
+      secure: true,
       auth: {
+        type: "login",
         user: process.env.USER,
         pass: process.env.PASS,
       },
@@ -28,20 +30,22 @@ export default async function handler(req, res) {
 
     try {
       const info = await transporter.sendMail({
-        from: `My server <${process.env.SENDER}>`,
+        from: `Janyel Marrero <${process.env.USER}>`,
         to: process.env.MAIL,
         subject: "Work Contact",
         html: contentHTML,
       });
       console.log("Message sent", info.messageId);
       res.status(200).json({
-        alert: "Your message was sent succesfuly. I will put in contact with you as soon as I can",
+        alert:
+          "Your message was sent succesfuly. I will put in contact with you as soon as I can",
         success: "success",
       });
     } catch (error) {
       console.log(error);
       res.status(500).json({
-        alert: "I'm sad to say that something went wrong sending the message. If it is not to bad could you contact me throw my social networks",
+        alert:
+          "I'm sad to say that something went wrong sending the message. If it is not to bad could you contact me through my social networks?",
         success: "danger",
       });
     }
